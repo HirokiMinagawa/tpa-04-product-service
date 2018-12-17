@@ -10,9 +10,7 @@ const getProducts = function() {
 const getTotalPrice = function(productIds) {
   return productIds
     .map(id => productsById[id])
-    .reduce((total, product) => {
-      return total + product.price;
-    }, 0);
+    .reduce((total, product) => total + product.price, 0);
 };
 
 module.exports = {
